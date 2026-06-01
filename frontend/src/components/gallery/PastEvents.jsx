@@ -21,7 +21,7 @@ const PastEvents = () => {
         <h2
           className="
             font-['Roboto_Condensed']
-            text-[30px]
+            text-[25px]
             font-[700]
             text-[#1D85B7]
 

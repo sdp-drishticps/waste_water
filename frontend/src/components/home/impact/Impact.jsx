@@ -158,7 +158,7 @@ const Impact = () => {
   ];
 
    return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-white to-[#F1F7FF] py-[40px] md:py-[55px] lg:py-[74px]">
+    <section className="relative w-full overflow-hidden bg-[linear-gradient(to_bottom,#FFFFFF_10%,#FFFFFF_30%,#F1F7FF_60%,#F1F7FF_100%)] py-[40px] md:py-[55px] lg:py-[74px]">
       <div className="mx-auto max-w-[1440px] px-[16px] sm:px-[20px] md:px-[32px] lg:px-[60px]">
         {/* Heading */}
         <div className="text-center">
@@ -187,13 +187,13 @@ const Impact = () => {
   <div
     className="
       absolute
+      pt-1
+      hidden
+      lg:block
       left-0
+      md:-left-18
       top-0
       z-10
-
-      w-[50px]
-      sm:w-[60px]
-      md:w-[90px]
       lg:w-[90px]
     "
   >
@@ -219,11 +219,8 @@ const Impact = () => {
       h-auto
       w-full
       object-contain
+    pl-[10px]
 
-    pl-[50px]
-sm:pl-[60px]
-md:pl-[80px]
-xl:pl-[90px]
     "
   />
 </div>

@@ -2,8 +2,13 @@ const impactCards = [
   {
     id: 1,
     badge: "/images/impact/1.png",
-    frontTitle:
-      "11 May 2026\n National Technology Day Celebration Chameli Devi Group of Institutions",
+   frontTitle: (
+  <>
+    <span className="font-[700]">11 May 2026</span>
+    <br />
+    Chameli Devi Group of Institutions  National Technology Day Celebration
+  </>
+),
 
     backContent: (
       <ul className="space-y-1 text-[16px] font-semibold text-[#222]">
@@ -108,11 +113,11 @@ const ImpactCard = () => {
                 <div className="">
                   <p
                     className="
-                      whitespace-pre-line
                       font-['Roboto_Condensed']
                       text-[18px]
                       leading-[30px]
                       text-[#333]
+                      
                       text-[16px] md:text-[18px]
                     "
                   >
