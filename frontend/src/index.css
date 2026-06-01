@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;700&display=swap');
+
+@import "tailwindcss";
+
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* HIDE SCROLLBAR FOR ALL BROWSERS */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+/* UPCOMING EVENTS ON TOP HEADER HOMEPAGE FADE BLINK ANIMATION */
+
+/* .upcoming-events-blink {
+  animation: upcomingBlink 1.9s linear infinite;
+}
+
+@keyframes upcomingBlink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+
+/* LENIS SMOOTH SCROLLING */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+
+/* White home upcoming events btn animation */
+
+
+
+@keyframes border-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-border-rotate {
+  animation: border-rotate 4s linear infinite;
+}
+
+/*CARD ANIMATION IMAPCT CARDS */
+
+
+.impact-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.impact-flip-card:hover .impact-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.impact-flip-front,
+.impact-flip-back {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(209, 236, 244, 0.5) -47.2%,
+    rgba(216, 223, 227, 0.5) 41.99%,
+    rgba(255, 255, 255, 0.5) 192.8%
+  );
+
+  box-shadow:
+    0px 7px 4px -3px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+
+  backface-visibility: hidden;
+}
+
+.impact-flip-front {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+
+.impact-flip-back {
+  transform: rotateY(180deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .impact-flip-card {
+    height: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .impact-flip-card {
+    height: 220px;
+  }
+
+  .impact-flip-front {
+    padding: 18px;
+  }
+}
