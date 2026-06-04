@@ -7,12 +7,11 @@ const investigators = [
     designation: "Professor",
     organization: "MFSoS, IIT Indore",
     image: "/images/overview/kiran-bala.png",
-    icon: "/images/overview/web.png",
-
-    // ADD THIS
-    link: "https://sites.google.com/view/aetsiiti",
+    icon: "/images/overview/linkedin.png",
+    link: "https://www.linkedin.com/in/kiran-bala-491b9515/",
+    website: "https://sites.google.com/view/aetsiiti",
+    orglink: "https://www.linkedin.com/in/algal-ecotechnology",
   },
-
   {
     name: "Dr. Atreyee Ghosh",
     role: "Co-Investigator",
@@ -20,9 +19,9 @@ const investigators = [
     organization: "IITI DRISHTI CPS Foundation",
     image: "/images/overview/atreyee-ghosh.jpeg",
     icon: "/images/overview/linkedin.png",
-
-    // ADD THIS
     link: "https://www.linkedin.com/in/atreyee-ghosh-896470128/",
+    website: "https://drishticps.iiti.ac.in/",
+    orglink: "https://www.linkedin.com/company/iiti-drishti-cps-foundation-iit-indore",
   },
 ];
 
@@ -68,13 +67,13 @@ const About = () => {
         </div>
 
         {/* Investigators Section */}
-        <div className="mt-[60px] flex flex-col items-center gap-10 lg:mt-[100px] lg:flex-row lg:items-center lg:justify-center lg:gap-0">
+        <div className="mt-[60px] flex flex-col items-center gap-10 lg:mt-[100px] xl:flex-row xl:justify-center xl:gap-0">
           {investigators.map((person, index) => (
             <React.Fragment key={index}>
-              {/* Investigator Block */}
-              <div className="flex w-full max-w-[540px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-center sm:gap-[20px]">
-                {/* Profile Image */}
-                <div className="mx-auto h-[260px] w-full max-w-[240px] shrink-0 overflow-hidden rounded-[15px] sm:mx-0 sm:h-[280px] border border-gray-400 ">
+              {/* Investigator Card */}
+              <div className="flex w-full max-w-[600px] flex-col items-center gap-[20px] sm:flex-row sm:items-stretch">
+                {/* Image */}
+                <div className="h-[260px] w-full max-w-[260px] shrink-0 overflow-hidden rounded-[16px] border border-[1px] border-[#B1B1B1]">
                   <img
                     src={person.image}
                     alt={person.name}
@@ -82,74 +81,83 @@ const About = () => {
                   />
                 </div>
 
-                {/* Info Card */}
-                <div className="flex h-auto min-h-[260px] w-full flex-col items-center justify-between rounded-[15px] bg-[#F2F3F5] px-[20px] py-[28px] text-center sm:h-[280px] sm:max-w-[280px] sm:px-[20px] sm:py-[35px]">
+                {/* Content */}
+                <div className="flex min-h-[260px] w-full sm:h-[260px] flex-1 flex-col items-center justify-between rounded-[16px] bg-[#F4F4F4] px-[24px] py-[24px] text-center">
+                  {/* Top */}
                   <div>
-                    <p className="font-['Roboto_Condensed'] text-[18px] font-bold text-[#1E3A4C] lg:text-[19px]">
+                    <p className="font-['Roboto_Condensed'] text-[18px] font-bold text-[#2E4A59] lg:text-[20px]">
                       {person.role}
                     </p>
 
-                    <h3 className="mt-[4px] font-['Roboto_Condensed'] text-[20px] font-bold text-[#1D85B7] lg:text-[22px]">
+                    <h3 className="mt-1 flex items-center justify-center gap-2 font-['Roboto_Condensed'] text-[22px] font-bold text-[#1D85B7] lg:text-[24px]">
+                      <span>
+                        <a
+                          href={person.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center rounded-[12px] transition-all duration-300 hover:scale-105"
+                        >
+                          <img
+                            src={person.icon}
+                            alt="social"
+                            className="h-[18px] w-[18px]"
+                          />
+                        </a>
+                      </span>
                       {person.name}
                     </h3>
                   </div>
 
-                  <div className="mt-6">
-                    <p className="font-['Roboto_Condensed'] text-[16px] font-normal text-[#555555] lg:text-[18px]">
+                  {/* Center */}
+                  <div>
+                    <p className="mt-3 font-['Roboto_Condensed'] text-[18px] font-normal text-[#4A4A4A] lg:text-[20px]">
                       {person.designation}
                     </p>
 
-                    <a
-                      href={
-                        person.organization === "IITI DRISHTI CPS Foundation"
-                          ? "https://drishticps.iiti.ac.in/"
-                          : undefined
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-['Roboto_Condensed'] text-[15px] font-normal text-[#555555] transition-colors duration-300 lg:text-[17px]"
-                    >
+                    <p className="mt-1 block font-['Roboto_Condensed'] text-[18px] text-[#4A4A4A]">
                       {person.organization}
-                    </a>
+                    </p>
                   </div>
 
-                  {/* Social Icon Button */}
-                  {/* Social Icon Button */}
-                  <a
-                    href={person.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-    mt-6
-    flex
-    h-[44px]
-    w-[44px]
-    items-center
-    justify-center
-    rounded-[10px]
-    shadow-sm
-    transition-all
-    duration-300
-    hover:scale-105
-  "
-                  >
-                    <img
-                      src={person.icon}
-                      alt="social"
-                      className="h-[22px] w-[22px] object-contain"
-                    />
-                  </a>
+                  {/* Bottom Icons */}
+                  <div className="mt-4 flex items-center gap-4 sm:mt-1">
+                    {/* Website Icon */}
+                    <a
+                      href={person.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-[#aaaaaa15] shadow-md transition-all duration-300 hover:scale-105"
+                    >
+                      <img
+                        src="/images/overview/web.png"
+                        alt="website"
+                        className="h-[22px] w-[22px]"
+                      />
+                    </a>
+
+                    {/* Org LinkedIn Icon */}
+                    <a
+                      href={person.orglink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-[#AAAAAA15] shadow-md transition-all duration-300 hover:scale-105"
+                    >
+                      <img
+                        src={person.icon}
+                        alt="social"
+                        className="h-[22px] w-[22px]"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
 
               {/* Divider */}
               {index === 0 && (
                 <>
-                  {/* Desktop Divider */}
-                  <div className="mx-[50px] hidden h-[280px] w-[1.5px] bg-[#E0E0E0] lg:block" />
+                  {/* Desktop Divider - Fixed breakpoint from lg to xl */}
+                  <div className="mx-[50px] hidden h-[260px] w-[1px] bg-[#D9D9D9] xl:block" />
 
-                  {/* Mobile Divider */}
-                  <div className="h-[1.5px] w-full max-w-[300px] bg-[#E0E0E0] lg:hidden" />
                 </>
               )}
             </React.Fragment>

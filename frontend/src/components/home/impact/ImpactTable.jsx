@@ -336,7 +336,6 @@ const ImpactTable = () => {
                   </div>
 
                   {/* Middle Column - Dynamic Bars (RECHARTS) */}
-                  {/* ADDED min-w-[0] to prevent flexbox collapse initialization errors */}
                   <div
                     onClick={() => setSelectedVillage(item)}
                     className="flex flex-1 min-w-[0] overflow-hidden rounded-[2px] bg-gray-50 h-[22px] md:h-[24px] cursor-pointer"
@@ -440,7 +439,7 @@ const ImpactTable = () => {
 
                   {/* Right Column (HTML) */}
                   <div className="w-[55px] md:w-[70px] text-right">
-                    <p className="font-['Roboto_Condensed'] text-[13px] md:text-[15px] font-[600] text-black">
+                    <p className="font-['Roboto_Condensed'] text-[13px] md:text-[15px] font-semibold text-black">
                       {activeCategory === "All"
                         ? item.total
                         : item[activeCatData.key]}
@@ -468,7 +467,7 @@ const ImpactTable = () => {
 
               {/* Right Side: Total Counter (Pushed to the very end to match the total column) */}
               <div className="ml-auto text-right w-[55px] md:w-[70px]">
-                <span className="font-['Roboto_Condensed'] text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-[600] text-[#136DD3]">
+                <span className="font-['Roboto_Condensed'] text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-semibold text-[#136DD3]">
                   {totalEngaged}
                 </span>
               </div>

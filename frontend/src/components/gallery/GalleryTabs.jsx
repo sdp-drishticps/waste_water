@@ -1,7 +1,7 @@
 const GalleryTabs = ({ activeTab, setActiveTab }) => {
   return (
     <div className="flex justify-center">
-      <div className="flex w-full max-w-[436px] border border-[#9F9F9F] rounded-[10px] p-1 bg-white">
+      <div className="flex w-full max-w-[435px] border border-[#9F9F9F] rounded-[10px] p-1 bg-white">
         
         <button
           onClick={() => setActiveTab("past")}

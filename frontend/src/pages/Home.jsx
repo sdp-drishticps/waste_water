@@ -5,33 +5,28 @@ import HeroSection from "../components/home/HeroSection";
 import Objectives from "../components/home/Objectives";
 import Impact from "../components/home/impact/Impact";
 
-
-
 const Home = () => {
   return (
     <>
-
       <HeroSection />
 
-     <section id="objectives">
-  <Objectives />
-</section>
+      <section id="objectives">
+        <Objectives />
+      </section>
 
-     <section id="impact">
-  <Impact />
-</section>
+      <section id="impact">
+        <Impact />
+      </section>
 
+      <section id="pathways">
+        <Pathways />
+      </section>
 
-     <section id="pathways">
-  <Pathways />
-</section>
+      <section id="facilities">
+        <Infrastructure />
+      </section>
 
-    <section id="facilities">
-       <Infrastructure />
-    </section>
-     
       {/* <Registration /> */}
-
     </>
   );
 };
