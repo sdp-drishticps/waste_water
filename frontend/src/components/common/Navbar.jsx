@@ -110,6 +110,12 @@ const Navbar = () => {
             alt="dst"
             className="h-[38px] w-auto object-contain sm:h-[45px] lg:h-[52px]"
           />
+
+          <img
+            src="/images/logos/ncstc-logo.png"
+            alt="ncstc"
+            className="h-[38px] w-auto object-contain sm:h-[45px] lg:h-[52px]"
+          />
         </div>
 
         {/* DESKTOP NAVBAR */}

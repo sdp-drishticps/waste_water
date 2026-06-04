@@ -73,7 +73,7 @@ const About = () => {
               {/* Investigator Card */}
               <div className="flex w-full max-w-[600px] flex-col items-center gap-[20px] sm:flex-row sm:items-stretch">
                 {/* Image */}
-                <div className="h-[260px] w-full max-w-[260px] shrink-0 overflow-hidden rounded-[16px] border border-[1px] border-[#B1B1B1]">
+                <div className="h-[280px] w-full max-w-[260px] shrink-0 overflow-hidden rounded-[16px] border border-[1px] border-[#B1B1B1]">
                   <img
                     src={person.image}
                     alt={person.name}
@@ -82,8 +82,7 @@ const About = () => {
                 </div>
 
                 {/* Content */}
-                <div className="flex min-h-[260px] w-full sm:h-[260px] flex-1 flex-col items-center justify-between rounded-[16px] bg-[#F4F4F4] px-[24px] py-[24px] text-center">
-                  {/* Top */}
+<div className="mx-auto flex min-h-[280px] w-[260px] sm:w-full sm:h-[260px] flex-1 flex-col items-center justify-between rounded-[16px] bg-[#F4F4F4] px-[24px] py-[24px] text-center">                  {/* Top */}
                   <div>
                     <p className="font-['Roboto_Condensed'] text-[18px] font-bold text-[#2E4A59] lg:text-[20px]">
                       {person.role}

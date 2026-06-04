@@ -47,6 +47,13 @@ const HomeNavbar = () => {
           alt="dst"
           className="h-[38px] w-auto object-contain sm:h-[45px] lg:h-[55px]"
         />
+
+         <img
+            src="/images/logos/ncstc-logo.png"
+            alt="ncstc"
+            className="h-[38px] w-auto object-contain sm:h-[45px] lg:h-[52px]"
+          />
+
       </div>
 
       {/* DESKTOP NAVBAR */}
