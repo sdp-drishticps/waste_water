@@ -20,25 +20,6 @@ body {
 }
 
 
-/* UPCOMING EVENTS ON TOP HEADER HOMEPAGE FADE BLINK ANIMATION */
-
-/* .upcoming-events-blink {
-  animation: upcomingBlink 1.9s linear infinite;
-}
-
-@keyframes upcomingBlink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-} */
 
 
 /* LENIS SMOOTH SCROLLING */
@@ -129,7 +110,7 @@ html.lenis body {
 
 @media (max-width: 1024px) {
   .impact-flip-card {
-    height: 240px;
+    height: 260px;
   }
 }
 

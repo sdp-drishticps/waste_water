@@ -1,5 +1,3 @@
-// src/components/home/Objectives.jsx
-
 const objectivesData = [
   {
     id: 1,
@@ -101,7 +99,7 @@ const Objectives = () => {
                     </linearGradient>
                   </defs>
 
-                  {/* FIGMA LIKE SLOPE */}
+                  {/* SLOPE */}
                   <path
                     d="
                       M 30 258

@@ -2,13 +2,15 @@ const impactCards = [
   {
     id: 1,
     badge: "/images/impact/1.png",
-   frontTitle: (
-  <>
-    <span className="font-[700]">11 May 2026</span>
-    <br />
-    Chameli Devi Group of Institutions  National Technology Day Celebration
-  </>
-),
+    frontTitle: (
+      <>
+        <span className="font-bold">11 May 2026</span>
+        <br />
+        <p className="leading-5">
+          Chameli Devi Group of Institutions National Technology Day Celebration
+        </p>
+      </>
+    ),
 
     backContent: (
       <ul className="space-y-1 text-[16px] font-semibold text-[#222]">
@@ -23,14 +25,20 @@ const impactCards = [
   {
     id: 2,
     badge: "/images/impact/2.png",
-    frontTitle: "Sustainability Quiz Competition",
+    frontTitle: (
+      <>
+        <span className="font-bold">11 May 2026</span>
+
+        <p className="leading-5">Sustainability Quiz Competition</p>
+      </>
+    ),
 
     backContent: (
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2">
         <img
-          src="/images/impact/event-1.jpeg"
+          src="/images/impact/2ndcardback.svg"
           alt="event"
-          className="h-[80px] w-[220px] rounded object-cover"
+          className="h-20 w-50 rounded object-cover"
         />
 
         <p className="text-[16px] font-semibold text-[#333]">
@@ -43,99 +51,128 @@ const impactCards = [
   {
     id: 3,
     badge: "/images/impact/3.png",
-    frontTitle:
-      "Expert Session 1",
-
+    frontTitle: (
+      <>
+        <span className="font-bold">05 June 2026</span>
+        <br />
+        <p className="leading-5">
+          {" "}
+          World Environment Day 2026 Special Event Swami Vivekanand Group of
+          Institutions, Indore
+        </p>{" "}
+      </>
+    ),
     backContent: (
-      <p className="text-center text-[16px] leading-[32px] font-medium">
-       Hydrogel-Based Materials for Biomedical and Environmental Applications.
-      </p>
+      <div>
+        <p className="text-[16px] font-semibold text-[#333]">
+          Sustainable Wastewater Management
+        </p>
+
+        <ul className="space-y-1 text-[16px] font-semibold text-[#222]">
+          <li>• Water Security </li>
+          <li>• Resource Recovery</li>
+          <li>• Environmental Protection</li>
+        </ul>
+      </div>
     ),
   },
 
   {
     id: 4,
     badge: "/images/impact/4.png",
-    frontTitle:
-      "Expert Session 2",
+    frontTitle: (
+      <>
+        <span className="font-bold ">05 June 2026</span>
+        <p className="leading-5">Sustainability Quiz Competition</p>
+      </>
+    ),
 
     backContent: (
-      <p className="text-center text-[16px] leading-[32px] font-medium">
-        Sustainable Proton Exchange Membranes for Hydrogen Fuel Cells.
-      </p>
+      <div className="flex items-center gap-2">
+        <img
+          src="/images/impact/4thcardback.svg"
+          alt="event"
+          className="h-20 w-23 rounded object-cover"
+        />
+
+        <ul className=" space-y-0 text-[14px] font-semibold text-[#222]">
+          <li>• Wastewater treatment</li>
+          <li>• Environmental conservation</li>
+          <li>• Sustainable engineering</li>
+          <li>• World Environment Day</li>
+        </ul>
+      </div>
     ),
   },
 ];
 
 const ImpactCard = () => {
   return (
-    <div className="mt-[50px] md:mt-[60px]">
-      <h3 className="mb-[20px] font-['Roboto_Condensed'] text-[18px] font-[600] text-[#1D85B7]">
+    <div className="mt-12.5 md:mt-15">
+      <h3 className="mb-5 font-['Roboto_Condensed'] text-[18px] font-semibold text-[#1D85B7]">
         Impact Summary
       </h3>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
         {impactCards.map((item) => (
-         <div
-  key={item.id}
- className="
+          <div
+            key={item.id}
+            className="
   impact-flip-card
-  h-[160px]
-  md:h-[180px]
-  xl:h-[160px]
+  h-40
+  md:h-45
+  xl:h-42
   w-full
 "
->
+          >
             <div className="impact-flip-card-inner">
               {/* FRONT */}
-             <div
-  className="
+              <div
+                className="
     impact-flip-front
     p-4
     md:p-5
      border
   border-[#C9D7E2]
   "
->
+              >
                 <img
                   src={item.badge}
                   alt=""
                   className="
                     absolute
-                    right-[16px]
-                    top-[8px]
-                    h-[58px]
-                    w-[58px]
+                    right-4
+                    top-2
+                    h-14.5
+                    w-14.5
                     object-contain
                   "
                 />
 
                 <div className="">
-                  <p
+                  <div
                     className="
                       font-['Roboto_Condensed']
                       text-[18px]
-                      leading-[30px]
-                      text-[#333]
-                      
-                      text-[16px] md:text-[18px]
+                      leading-7.5
+                      text-[#333] md:text-[18px] 
                     "
                   >
                     {item.frontTitle}
-                  </p>
+                  </div>
                 </div>
               </div>
 
               {/* BACK */}
-           <div
-  className="
+              <div
+                className="
     impact-flip-back
     p-4
     md:p-5
      border
   border-[#C9D7E2]
   "
->
+              >
                 {item.backContent}
               </div>
             </div>

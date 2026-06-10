@@ -10,6 +10,8 @@ export const initLenis = () => {
     touchMultiplier: 2,
   });
 
+  window.lenis = lenis;
+
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -20,4 +22,4 @@ export const initLenis = () => {
   return lenis;
 };
 
-export default lenis;
+export const getLenis = () => lenis;
