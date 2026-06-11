@@ -13,7 +13,7 @@ const impactCards = [
     ),
 
     backContent: (
-      <ul className="space-y-1 text-[16px] font-semibold text-[#222]">
+      <ul className="space-y-0 text-[16px] font-normal text-[#222]">
         <li>• 80+ Participants</li>
         <li>• 2 Expert Lectures</li>
         <li>• 5+ Academic Disciplines</li>
@@ -41,7 +41,7 @@ const impactCards = [
           className="h-20 w-50 rounded object-cover"
         />
 
-        <p className="text-[16px] font-semibold text-[#333]">
+        <p className="text-[16px] font-normal text-[#333]">
           “Celebrating innovation through knowledge and participation.”
         </p>
       </div>
@@ -64,11 +64,11 @@ const impactCards = [
     ),
     backContent: (
       <div>
-        <p className="text-[16px] font-semibold text-[#333]">
+        <p className="text-[16px] font-normal text-[#333]">
           Sustainable Wastewater Management
         </p>
 
-        <ul className="space-y-1 text-[16px] font-semibold text-[#222]">
+        <ul className="space-y-0 text-[16px] font-normal text-[#222]">
           <li>• Water Security </li>
           <li>• Resource Recovery</li>
           <li>• Environmental Protection</li>
@@ -83,7 +83,7 @@ const impactCards = [
     frontTitle: (
       <>
         <span className="font-bold ">05 June 2026</span>
-        <p className="leading-5">Sustainability Quiz Competition</p>
+        <p className="leading-5 ">Sustainability Quiz Competition</p>
       </>
     ),
 
@@ -92,10 +92,10 @@ const impactCards = [
         <img
           src="/images/impact/4thcardback.svg"
           alt="event"
-          className="h-20 w-23 rounded object-cover"
+          className="h-20 w-22 rounded object-cover"
         />
 
-        <ul className=" space-y-0 text-[14px] font-semibold text-[#222]">
+        <ul className=" space-y-0 text-[15px] font-normal text-[#222]">
           <li>• Wastewater treatment</li>
           <li>• Environmental conservation</li>
           <li>• Sustainable engineering</li>
@@ -134,6 +134,7 @@ const ImpactCard = () => {
     md:p-5
      border
   border-[#C9D7E2]
+ 
   "
               >
                 <img
@@ -155,6 +156,8 @@ const ImpactCard = () => {
                       font-['Roboto_Condensed']
                       text-[18px]
                       leading-7.5
+                      h-14
+                      
                       text-[#333] md:text-[18px] 
                     "
                   >
