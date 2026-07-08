@@ -3,14 +3,21 @@ const upcomingEventsData = [
   {
     id: 1,
     date: "09-15 Aug, 2026",
-    thumbnail: "/pdfs/thumbnails/Wastewater.jpg",
-    pdf: "/pdfs/Wastewater.pdf",
+    thumbnail: "/pdfs/thumbnails/event1.jpg",
+    pdf: "/pdfs/event1.pdf",
   },
   {
     id: 2,
     date: "05 Jun, 2026",
-    thumbnail: "/pdfs/thumbnails/Wastewater2.jpeg",
-    pdf: "/pdfs/Wastewater2.pdf",
+    thumbnail: "/pdfs/thumbnails/event2.jpeg",
+    pdf: "/pdfs/event2.pdf",
+  },
+   {
+    id: 2,
+    date: "11 July, 2026",
+    thumbnail: "/pdfs/thumbnails/event3.jpeg",
+    pdf: "/pdfs/event3.pdf",
+
   },
 ];
 

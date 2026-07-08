@@ -15,7 +15,7 @@ const Gallery = () => {
   const [activeTab, setActiveTab] = useState(defaultTab);
 
   return (
-    <section className="pt-15 min-h-screen">
+    <section className="pt-15 ">
       <div className="container mx-auto px-4">
         <GalleryTabs
           activeTab={activeTab}
