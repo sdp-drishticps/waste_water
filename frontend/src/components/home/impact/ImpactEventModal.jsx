@@ -44,7 +44,7 @@ const ImpactEventModal = ({ selectedVillage, setSelectedVillage }) => {
         </button>
 
         <div
-          className="h-[90vh] overflow-y-auto p-6 md:p-12"
+          className="custom-scrollbar h-[90vh] overflow-y-auto p-6 md:p-12"
           data-lenis-prevent
         >
           {/* Header */}

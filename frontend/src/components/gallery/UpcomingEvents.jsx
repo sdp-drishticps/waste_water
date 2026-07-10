@@ -15,7 +15,7 @@ const upcomingEventsData = [
    {
     id: 2,
     date: "11 July, 2026",
-    thumbnail: "/pdfs/thumbnails/event3.jpeg",
+    thumbnail: "/pdfs/thumbnails/event3.png",
     pdf: "/pdfs/event3.pdf",
 
   },
@@ -65,7 +65,7 @@ const UpcomingEvents = () => {
                   className="
                     h-[320px]
                     w-full
-                    object-cover
+                    object-fill
                     border border-[#000000]
                     transition-all
                     duration-300
