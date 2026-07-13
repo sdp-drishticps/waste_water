@@ -48,12 +48,7 @@ const About = () => {
             (NCSTC), is hosted at the Indian Institute of Technology Indore. The
             initiative focuses on connecting communities with innovative
             technologies for wastewater treatment and renewable energy to
-            promote environmental sustainability. Aligned with the United
-            Nations Sustainable Development Goals (SDGs) for Clean Water &
-            Sanitation and Affordable & Clean Energy, the project bridges the
-            gap between scientific research and public understanding through
-            expert lectures, hands-on workshops, laboratory training, outreach
-            activities, and community engagement programs.
+            promote environmental sustainability. 
           </p>
 
           <p className="max-w-[1240px] font-['Roboto_Condensed'] text-[16px] font-light leading-[28px] text-[#4A4A4A] sm:text-[17px] lg:text-[19px]">
