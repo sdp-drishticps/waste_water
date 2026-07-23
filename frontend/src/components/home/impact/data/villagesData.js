@@ -90,7 +90,86 @@ const villages = [
     },
   },
   { id: 3, name: "Datoda", total: 0, students: 0, researchers: 0, industry: 0, community: 0, color: "#60A912" },
-  { id: 4, name: "Jhabua", total: 0, students: 0, researchers: 0, industry: 0, community: 0, color: "#DA263E" },
+
+ {
+  id: 4,
+  name: "Jhabua",
+  total: 269,
+  students: 269,
+  researchers: 0,
+  industry: 0,
+  community: 0,
+  color: "#DA263E",
+  event: {
+    date: "11 Jul, 2026",
+    college:
+      "Buniyadi Govt. Girls High School, Jhabua & PM Shri Govt. Girls Higher Secondary School, Jhabua",
+
+    learningTitle: "",
+
+    learning: [
+      {
+        text: "Water Conservation & Security",
+        emoji: "🌍",
+      },
+      {
+        text: "STEM Career Opportunities",
+        emoji: "🔬",
+      },
+      {
+        text: "Sustainable Water Management",
+        emoji: "💧",
+      },
+      {
+        text: "Environmental Conservation",
+        emoji: "🌿",
+      },
+      {
+        text: "Scientific Thinking & Innovation",
+        emoji: "🧠",
+      },
+      {
+        text: "Knowledge through Interactive Quiz",
+        emoji: "🏆",
+      },
+    ],
+
+    mainImage: "/images/gallery/Jb/jb1.jpg",
+
+    timeline: [
+      {
+        step: "01",
+        color: "#183547",
+        title:
+          "Prof. Kiran Bala  (Mehta Family School of Sustainability, IIT Indore)",
+        description:
+          "Topic: Pathways to Water Security, Science, & Innovation. Key themes: Water conservation strategies, Career opportunities in STEM, Environmental sustainability.",
+      },
+      {
+        step: "02",
+        color: "#00A6D6",
+        title:
+          "Mrs. Supriya Bisen (Assistant Commissioner of Tribal Affairs, Jhabua)",
+        description:
+          "Topic: Importance of Education & Career Development. Key themes: Value of quality education, Career awareness, Student motivation and future opportunities.",
+      },
+      {
+        step: "03",
+        color: "#82BA22",
+        title: "Interactive Awareness Session",
+        description:
+          "Interactive discussion on water scarcity challenges, Sustainable water management, and Environmental conservation practices.",
+      },
+      {
+        step: "04",
+        color: "#EA7907",
+        title: "Quiz Competition & Recognition",
+        description:
+          "Activities included STEM & General Knowledge Quiz, Trophy distribution for winners, and Participation certificates for all students.",
+      },
+    ],
+  },
+},
   { id: 5, name: "Bagiram", total: 0, students: 0, researchers: 0, industry: 0, community: 0, color: "#EA7907" },
   { id: 6, name: "Rau", total: 0, students: 0, researchers: 0, industry: 0, community: 0, color: "#8237B0" },
   { id: 7, name: "Mhow", total: 0, students: 0, researchers: 0, industry: 0, community: 0, color: "#1B83E3" },

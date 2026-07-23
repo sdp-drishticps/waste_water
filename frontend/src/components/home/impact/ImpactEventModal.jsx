@@ -72,7 +72,7 @@ const ImpactEventModal = ({ selectedVillage, setSelectedVillage }) => {
               >
                 {event.timeline?.map((step, idx) => {
                   const isEven = idx % 2 === 0;
-                  const currentTop = idx * 180; //gap between steps
+                  const currentTop = idx * 160; //gap between steps
                   const iconSrc = STEP_ICONS[idx % STEP_ICONS.length]; // 4 or more icons safe indexing
 
                   return (
@@ -93,7 +93,7 @@ const ImpactEventModal = ({ selectedVillage, setSelectedVillage }) => {
                             <h4 className="font-bold text-gray-900 text-[16px]">
                               {step.title}
                             </h4>
-                            <p className="text-[14px] leading-6 text-[#555] mt-1">
+                            <p className="text-[14px] leading-4.5 text-[#555] mt-1">
                               {step.description}
                             </p>
                           </div>
@@ -111,7 +111,7 @@ const ImpactEventModal = ({ selectedVillage, setSelectedVillage }) => {
                             <h4 className="font-bold text-gray-900 text-[16px]">
                               {step.title}
                             </h4>
-                            <p className="text-[14px] leading-6 text-[#555] mt-1">
+                            <p className="text-[14px] leading-4.5 text-[#555] mt-1">
                               {step.description}
                             </p>
                           </div>
