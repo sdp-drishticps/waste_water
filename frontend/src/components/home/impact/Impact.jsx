@@ -3,19 +3,19 @@ import ImpactTable from "./ImpactTable";
 
 const Impact = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[linear-gradient(to_bottom,#FFFFFF_10%,#FFFFFF_30%,#F1F7FF_60%,#F1F7FF_100%)] py-[40px] md:py-[55px] lg:py-[74px]">
-      <div className="mx-auto max-w-[1440px] px-[16px] sm:px-[20px] md:px-[32px] lg:px-[60px]">
+    <section className="relative w-full overflow-hidden bg-[linear-gradient(to_bottom,#FFFFFF_10%,#FFFFFF_30%,#F1F7FF_60%,#F1F7FF_100%)] py-10 md:py-13.75 lg:py-18.5">
+      <div className="mx-auto max-w-360 px-4 sm:px-5 md:px-8 lg:px-12.5">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="font-['Roboto_Condensed'] text-[24px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-[600] leading-tight text-black">
+          <h2 className="font-['Roboto_Condensed'] text-[24px] sm:text-[28px] md:text-[34px] lg:text-[40px] font-semibold leading-tight text-black">
             Target Impact & Outreach
           </h2>
 
-          <p className="mx-auto mt-[14px] md:mt-[18px] lg:mt-[24px] max-w-[994px] font-['Roboto_Condensed'] text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] font-[300] leading-relaxed text-black">
+          <p className="mx-auto mt-3.5 md:mt-4.5 lg:mt-6 max-w-248.5 font-['Roboto_Condensed'] text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] font-light leading-relaxed text-black">
             This visualization illustrates the projected reach of our programs
             across key regional blocks. It provides accountability regarding the
             project's{" "}
-            <span className="font-[600] text-[#1D85B7]">
+            <span className="font-semibold text-[#1D85B7]">
               geographic and demographic focus,
             </span>{" "}
             emphasizing our commitment to widespread environmental education as
@@ -24,11 +24,11 @@ const Impact = () => {
         </div>
 
         {/* Main Content */}
-        <div className="mt-[40px] md:mt-[55px] lg:mt-[90px] flex flex-col xl:flex-row items-center xl:items-start justify-between gap-[32px] md:gap-[40px] xl:gap-6">
+        <div className="mt-10 md:mt-13.75 lg:mt-22.5 flex flex-col xl:flex-row items-center xl:items-start justify-between gap-8 md:gap-10 xl:gap-6">
           {/* LEFT MAP */}
-          <div className="relative w-full xl:max-w-[520px] 2xl:max-w-[630px]">
+          <div className="relative w-full xl:max-w-130 2xl:max-w-157.5">
             {/* Location Video */}
-            <div className="absolute pt-1 hidden lg:block left-0 md:-left-18  top-0 z-10 lg:w-[90px]"
+            <div className="absolute pt-1 hidden lg:block left-0 md:-left-18  top-0 z-10 lg:w-22.5"
  >
               <video
                 autoPlay
@@ -48,7 +48,7 @@ const Impact = () => {
             <img
               src="/images/impact/map.png"
               alt="map"
-              className=" h-auto w-full object-contain pl-[10px] " />
+              className=" h-auto w-full object-contain pl-2.5 " />
           </div>
 
           {/* RIGHT TABLE */}

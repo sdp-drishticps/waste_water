@@ -1,5 +1,10 @@
-const impactCards = [
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
+
+const impactCards = [
   {
     id: 1,
     badge: "/images/impact/1.png",
@@ -12,69 +17,18 @@ const impactCards = [
         </p>
       </>
     ),
- backContent: (
-      
-        <img
-          src="/images/impact/1stcardback.jpeg"
-          alt="event"
-          className=" w-50 h-28 rounded object-fill"
-        />
-   
+    backContent: (
+      <img
+        src="/images/impact/1stcardback.jpeg"
+        alt="event"
+        className=" w-50 h-28 rounded object-fill"
+      />
     ),
   },
 
-  {
+   {
     id: 2,
     badge: "/images/impact/2.png",
-    frontTitle: (
-      <>
-        <span className="font-bold">11 May 2026</span>
-        <br />
-        <p className="leading-5">
-          Chameli Devi Group of Institutions National Technology Day Celebration
-        </p>
-      </>
-    ),
-
-    backContent: (
-      <ul className="space-y-0 text-[16px] font-normal text-[#222]">
-        <li>• 80+ Participants</li>
-        <li>• 2 Expert Lectures</li>
-        <li>• 5+ Academic Disciplines</li>
-        <li>• 1 Sustainability Quiz Competition</li>
-      </ul>
-    ),
-  },
-
-  {
-    id: 3,
-    badge: "/images/impact/3.png",
-    frontTitle: (
-      <>
-        <span className="font-bold">11 May 2026</span>
-
-        <p className="leading-5">Sustainability Quiz Competition</p>
-      </>
-    ),
-
-    backContent: (
-      <div className="flex items-center gap-2">
-        <img
-          src="/images/impact/2ndcardback.svg"
-          alt="event"
-          className="h-20 w-50 rounded object-cover"
-        />
-
-        <p className="text-[16px] font-normal text-[#333]">
-          “Celebrating innovation through knowledge and participation.”
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 4,
-    badge: "/images/impact/4.png",
     frontTitle: (
       <>
         <span className="font-bold">05 June 2026</span>
@@ -102,8 +56,8 @@ const impactCards = [
   },
 
   {
-    id: 5,
-    badge: "/images/impact/5.png",
+    id: 3,
+    badge: "/images/impact/3.png",
     frontTitle: (
       <>
         <span className="font-bold ">05 June 2026</span>
@@ -128,38 +82,118 @@ const impactCards = [
       </div>
     ),
   },
+
+  {
+    id: 4,
+    badge: "/images/impact/4.png",
+    frontTitle: (
+      <>
+        <span className="font-bold">11 May 2026</span>
+        <br />
+        <p className="leading-5">
+          Chameli Devi Group of Institutions National Technology Day Celebration
+        </p>
+      </>
+    ),
+
+    backContent: (
+      <ul className="space-y-0 text-[16px] font-normal text-[#222]">
+        <li>• 80+ Participants</li>
+        <li>• 2 Expert Lectures</li>
+        <li>• 5+ Academic Disciplines</li>
+        <li>• 1 Sustainability Quiz Competition</li>
+      </ul>
+    ),
+  },
+
+  {
+    id: 5,
+    badge: "/images/impact/5.png",
+    frontTitle: (
+      <>
+        <span className="font-bold">11 May 2026</span>
+
+        <p className="leading-5">Sustainability Quiz Competition</p>
+      </>
+    ),
+
+    backContent: (
+      <div className="flex items-center gap-2">
+        <img
+          src="/images/impact/2ndcardback.svg"
+          alt="event"
+          className="h-20 w-50 rounded object-cover"
+        />
+
+        <p className="text-[16px] font-normal text-[#333]">
+          “Celebrating innovation through knowledge and participation.”
+        </p>
+      </div>
+    ),
+  },
+
+ 
 ];
 
 const ImpactCard = () => {
+
   return (
-    <div className="mt-12.5 md:mt-15">
-      <h3 className="mb-5 font-['Roboto_Condensed'] text-[18px] font-semibold text-[#1D85B7]">
+  <div className="mt-12.5 md:mt-15">
+    {/* Heading */}
+    <div className="mb-5 flex items-center justify-between">
+      <h3 className="font-['Roboto_Condensed'] text-[18px] font-semibold text-[#1D85B7]">
         Impact Summary
       </h3>
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-        {impactCards.map((item) => (
-          <div
-            key={item.id}
-            className="
-  impact-flip-card
-  h-40
-  md:h-45
-  xl:h-42
-  w-full
-"
-          >
+    <div className="flex gap-3">
+  <button className="impact-prev flex h-10 w-10 items-center justify-center rounded-full border border-[#1D85B7] text-[#1D85B7] hover:bg-[#1D85B7] hover:text-white">
+    &#10094;
+  </button>
+
+  <button className="impact-next flex h-10 w-10 items-center justify-center rounded-full border border-[#1D85B7] text-[#1D85B7] hover:bg-[#1D85B7] hover:text-white">
+    &#10095;
+  </button>
+</div>
+    </div>
+
+ <Swiper
+  modules={[Navigation]}
+  navigation={{
+    prevEl: ".impact-prev",
+    nextEl: ".impact-next",
+  }}
+  slidesPerView={4}
+  slidesPerGroup={1}
+  spaceBetween={20}
+  watchOverflow
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1340: {
+      slidesPerView: 4,
+    },
+  }}
+>
+  {impactCards.map((item) => (
+    <SwiperSlide key={item.id}>
+      <div className="impact-flip-card h-40 md:h-45 xl:h-42">
             <div className="impact-flip-card-inner">
               {/* FRONT */}
               <div
                 className="
-    impact-flip-front
-    p-4
-    md:p-5
-     border
-  border-[#C9D7E2]
- 
-  "
+                  impact-flip-front
+                  p-4
+                  md:p-5
+                  border
+                  border-[#C9D7E2]
+                "
               >
                 <img
                   src={item.badge}
@@ -174,40 +208,38 @@ const ImpactCard = () => {
                   "
                 />
 
-                <div className="">
-                  <div
-                    className="
-                      font-['Roboto_Condensed']
-                      text-[18px]
-                      leading-7.5
-                      h-14
-                      
-                      text-[#333] md:text-[18px] 
-                    "
-                  >
-                    {item.frontTitle}
-                  </div>
+                <div
+                  className="
+                    font-['Roboto_Condensed']
+                    text-[18px]
+                    leading-7.5
+                    h-14
+                    text-[#333]
+                  "
+                >
+                  {item.frontTitle}
                 </div>
               </div>
 
               {/* BACK */}
               <div
                 className="
-    impact-flip-back
-    p-4
-    md:p-5
-     border
-  border-[#C9D7E2]
-  "
+                  impact-flip-back
+                  p-4
+                  md:p-5
+                  border
+                  border-[#C9D7E2]
+                "
               >
                 {item.backContent}
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  );
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+);
 };
 
 export default ImpactCard;

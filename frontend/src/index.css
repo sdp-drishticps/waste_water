@@ -140,3 +140,15 @@ html.lenis body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #14688F;
 }
+
+/*IMPACT CARDS BTN */
+
+.impact-prev.swiper-button-disabled,
+.impact-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: #e5e7eb;
+  color: #9ca3af;
+  border-color: #d1d5db;
+}
