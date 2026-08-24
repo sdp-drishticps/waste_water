@@ -1,41 +1,55 @@
-
 const upcomingEventsData = [
   {
     id: 1,
     date: "09-15 Aug, 2026",
+    sortDate: "2026-08-15",
     thumbnail: "/pdfs/thumbnails/event1.jpg",
     pdf: "/pdfs/event1.pdf",
   },
+
   {
     id: 2,
     date: "05 Jun, 2026",
+    sortDate: "2026-06-05",
     thumbnail: "/pdfs/thumbnails/event2.jpeg",
     pdf: "/pdfs/event2.pdf",
   },
-   {
-    id: 2,
+
+  {
+    id: 3,
     date: "11 July, 2026",
+    sortDate: "2026-07-11",
     thumbnail: "/pdfs/thumbnails/event3.png",
     pdf: "/pdfs/event3.pdf",
+  },
 
+  {
+    id: 4,
+    date: "21 Aug, 2026",
+    sortDate: "2026-08-21",
+    thumbnail: "/pdfs/thumbnails/event4.png",
+    pdf: "/pdfs/event4.pdf",
   },
 ];
-
 const UpcomingEvents = () => {
+  // Latest → Oldest
+  const sortedEvents = [...upcomingEventsData].sort(
+    (a, b) => new Date(b.sortDate) - new Date(a.sortDate),
+  );
+
   return (
     <section className="w-full pb-[70px] pt-2 lg:pb-[90px]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[60px]">
         {/* Section Heading */}
         <h2
           className="
+            text-center
             font-['Roboto_Condensed']
             text-[25px]
-            font-[700]
+            font-bold
             text-[#1D85B7]
-            text-center
             sm:text-left
             sm:text-[30px]
-            lg:text-[30px]
           "
         >
           Upcoming Events
@@ -54,9 +68,17 @@ const UpcomingEvents = () => {
             xl:grid-cols-4
           "
         >
-          {upcomingEventsData.map((event) => (
-            /* Card wrapper modified with mx-auto for small devices */
-            <div key={event.id} className="flex w-[250px] flex-col mx-auto sm:mx-0">
+          {sortedEvents.map((event) => (
+            <div
+              key={event.id}
+              className="
+                mx-auto
+                flex
+                w-[250px]
+                flex-col
+                sm:mx-0
+              "
+            >
               {/* PDF Poster */}
               <a href={event.pdf} target="_blank" rel="noopener noreferrer">
                 <img
@@ -65,8 +87,9 @@ const UpcomingEvents = () => {
                   className="
                     h-[320px]
                     w-full
+                    border
+                    border-black
                     object-fill
-                    border border-[#000000]
                     transition-all
                     duration-300
                     hover:shadow-lg
@@ -91,32 +114,13 @@ const UpcomingEvents = () => {
                   className="
                     font-['Roboto_Condensed']
                     text-[20px]
-                    font-[700]
+                    font-bold
                     text-[#222]
                   "
                 >
                   {event.date}
                 </p>
               </div>
-
-              {/* Register Button
-              <a
-                href={event.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  mt-4
-                  font-['Roboto_Condensed']
-                  text-[18px]
-                  font-[400]
-                  text-[#1D85B7]
-                  transition-all
-                  duration-300
-                  hover:underline
-                "
-              >
-                Register Now
-              </a> */}
             </div>
           ))}
         </div>

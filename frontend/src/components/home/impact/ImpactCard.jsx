@@ -26,7 +26,7 @@ const impactCards = [
     ),
   },
 
-   {
+  {
     id: 2,
     badge: "/images/impact/2.png",
     frontTitle: (
@@ -131,74 +131,71 @@ const impactCards = [
       </div>
     ),
   },
-
- 
 ];
 
 const ImpactCard = () => {
-
   return (
-  <div className="mt-12.5 md:mt-15">
-    {/* Heading */}
-    <div className="mb-5 flex items-center justify-between">
-      <h3 className="font-['Roboto_Condensed'] text-[18px] font-semibold text-[#1D85B7]">
-        Impact Summary
-      </h3>
+    <div className="mt-12.5 md:mt-15">
+      {/* Heading */}
+      <div className="mb-5 flex items-center justify-between">
+        <h3 className="font-['Roboto_Condensed'] text-[18px] font-semibold text-[#1D85B7]">
+          Impact Summary
+        </h3>
 
-    <div className="flex gap-3">
-  <button className="impact-prev flex h-10 w-10 items-center justify-center rounded-full border border-[#1D85B7] text-[#1D85B7] hover:bg-[#1D85B7] hover:text-white">
-    &#10094;
-  </button>
+        <div className="flex gap-3">
+          <button className="impact-prev flex h-10 w-10 items-center justify-center rounded-full border border-[#1D85B7] text-[#1D85B7] hover:bg-[#1D85B7] hover:text-white">
+            &#10094;
+          </button>
 
-  <button className="impact-next flex h-10 w-10 items-center justify-center rounded-full border border-[#1D85B7] text-[#1D85B7] hover:bg-[#1D85B7] hover:text-white">
-    &#10095;
-  </button>
-</div>
-    </div>
+          <button className="impact-next flex h-10 w-10 items-center justify-center rounded-full border border-[#1D85B7] text-[#1D85B7] hover:bg-[#1D85B7] hover:text-white">
+            &#10095;
+          </button>
+        </div>
+      </div>
 
- <Swiper
-  modules={[Navigation]}
-  navigation={{
-    prevEl: ".impact-prev",
-    nextEl: ".impact-next",
-  }}
-  slidesPerView={4}
-  slidesPerGroup={1}
-  spaceBetween={20}
-  watchOverflow
-  breakpoints={{
-    0: {
-      slidesPerView: 1,
-    },
-    640: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-    1340: {
-      slidesPerView: 4,
-    },
-  }}
->
-  {impactCards.map((item) => (
-    <SwiperSlide key={item.id}>
-      <div className="impact-flip-card h-40 md:h-45 xl:h-42">
-            <div className="impact-flip-card-inner">
-              {/* FRONT */}
-              <div
-                className="
+      <Swiper
+        modules={[Navigation]}
+        navigation={{
+          prevEl: ".impact-prev",
+          nextEl: ".impact-next",
+        }}
+        slidesPerView={4}
+        slidesPerGroup={1}
+        spaceBetween={20}
+        watchOverflow
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1340: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+        {impactCards.map((item) => (
+          <SwiperSlide key={item.id}>
+            <div className="impact-flip-card h-40 md:h-45 xl:h-42">
+              <div className="impact-flip-card-inner">
+                {/* FRONT */}
+                <div
+                  className="
                   impact-flip-front
                   p-4
                   md:p-5
                   border
                   border-[#C9D7E2]
                 "
-              >
-                <img
-                  src={item.badge}
-                  alt=""
-                  className="
+                >
+                  <img
+                    src={item.badge}
+                    alt=""
+                    className="
                     absolute
                     right-4
                     top-2
@@ -206,40 +203,40 @@ const ImpactCard = () => {
                     w-14.5
                     object-contain
                   "
-                />
+                  />
 
-                <div
-                  className="
+                  <div
+                    className="
                     font-['Roboto_Condensed']
                     text-[18px]
                     leading-7.5
                     h-14
                     text-[#333]
                   "
-                >
-                  {item.frontTitle}
+                  >
+                    {item.frontTitle}
+                  </div>
                 </div>
-              </div>
 
-              {/* BACK */}
-              <div
-                className="
+                {/* BACK */}
+                <div
+                  className="
                   impact-flip-back
                   p-4
                   md:p-5
                   border
                   border-[#C9D7E2]
                 "
-              >
-                {item.backContent}
+                >
+                  {item.backContent}
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-);
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 };
 
 export default ImpactCard;
