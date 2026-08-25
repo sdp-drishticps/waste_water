@@ -31,6 +31,8 @@ const upcomingEventsData = [
     pdf: "/pdfs/event4.pdf",
   },
 ];
+
+
 const UpcomingEvents = () => {
   // Latest → Oldest
   const sortedEvents = [...upcomingEventsData].sort(
@@ -79,7 +81,7 @@ const UpcomingEvents = () => {
                 sm:mx-0
               "
             >
-              {/* PDF Poster */}
+              {/* PDF Posters */}
               <a href={event.pdf} target="_blank" rel="noopener noreferrer">
                 <img
                   src={event.thumbnail}
